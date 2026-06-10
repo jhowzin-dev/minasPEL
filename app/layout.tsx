@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Navbar } from "../src/components/ui/navbar";
+import HeadComponent from "./head";
 import { WhatsAppFAB } from "../src/components/ui/whatsapp-fab";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -29,6 +30,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <HeadComponent />
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}

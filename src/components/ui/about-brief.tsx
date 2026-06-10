@@ -66,7 +66,7 @@ export function AboutBrief() {
               viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
-              <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-5 border border-blue-500/20">
+              <div className="w-12 h-12 rounded-lg bg-[var(--bg-blue-500-10)] flex items-center justify-center mb-5 border border-blue-500/20">
                 {item.icon}
               </div>
               <h3 className="text-lg font-semibold text-white mb-2 tracking-wide">

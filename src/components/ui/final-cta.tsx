@@ -3,9 +3,9 @@ import { motion } from "motion/react";
 
 export function FinalCTA() {
   return (
-    <section className="relative py-10 bg-gradient-to-r from-gray-950 via-blue-950 to-gray-950 text-white overflow-hidden border-t border-white/5">
+    <section className="relative py-10 bg-gradient-to-r from-gray-950 via-blue-950 to-gray-950 text-white overflow-hidden border-t border-white/5 isolate transform-gpu">
       {/* Detalhe sutil de luz ao fundo */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-40 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-40 bg-[var(--bg-blue-500-10)] rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto px-6 z-10 flex flex-col md:flex-row items-center justify-between gap-6">
         

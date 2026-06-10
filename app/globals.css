@@ -3,6 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* WebKit‑safe semi‑transparent colors */
+  --bg-white-5: #ffffff0d;   /* 5 % */
+  --bg-white-10: #ffffff1a;  /* 10 % */
+  --bg-white-20: #ffffff33;  /* 20 % */
+  --bg-white-30: #ffffff4d;  /* 30 % */
+  --bg-black-30: #0000004d;  /* 30 % */
+  --bg-blue-500-10: #3b82f61a; /* Tailwind blue‑500 10 % */
 }
 
 @theme inline {
