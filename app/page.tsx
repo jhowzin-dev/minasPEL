@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       {/* Hero based on original spotlight-new */}
-      <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black overflow-hidden">
+      <div id="inicio" className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black overflow-hidden">
         <Spotlight />
         <main className="relative z-10 flex flex-1 w-full max-w-3xl flex-col items-center justify-center py-32 px-8 text-center">
           <h1 className="text-5xl font-bold text-black dark:text-white">Minaspel</h1>
@@ -37,12 +37,12 @@ export default function Home() {
       </div>
       <ClientsMarquee />
       <Stats />
-      <AboutBrief />
-      <ProductCards />
+        <section id="sobre"><AboutBrief /></section>
+        <section id="produto"><ProductCards /></section>
       <Differentials />
       <Gallery />
       <FAQ />
-      <FinalCTA />
+        <section id="contato"><FinalCTA /></section>
     </>
   );
 }

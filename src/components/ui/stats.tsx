@@ -22,7 +22,7 @@ export function Stats() {
               className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
               <p className="text-3xl font-bold text-blue-600 mb-2">{s.value}</p>

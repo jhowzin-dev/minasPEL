@@ -67,7 +67,7 @@ export function Differentials() {
           <motion.span 
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
             className="inline-block px-4 py-1 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-sm font-semibold mb-4"
           >
             Nossos Diferenciais
@@ -76,7 +76,7 @@ export function Differentials() {
           <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-50 tracking-tight"
           >
@@ -86,7 +86,7 @@ export function Differentials() {
           <motion.p 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ delay: 0.2 }}
             className="mt-6 text-lg text-gray-600 dark:text-gray-400"
           >
@@ -99,7 +99,7 @@ export function Differentials() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }} // Anima quando entra na tela
+          viewport={{ once: false, margin: "-100px" }} // Anima quando entra na tela
         >
           {differentials.map((item, i) => {
             const Icon = item.icon;

@@ -14,7 +14,7 @@ export function FinalCTA() {
           <motion.span 
             initial={{ opacity: 0, y: -5 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="inline-block text-[10px] font-bold tracking-widest uppercase text-blue-400 mb-1"
           >
             Vamos conversar?
@@ -23,7 +23,7 @@ export function FinalCTA() {
             className="text-xl sm:text-2xl font-bold tracking-tight text-gray-100"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             Precisa de uma solução para seu projeto?
@@ -35,7 +35,7 @@ export function FinalCTA() {
           className="flex flex-row items-center gap-3 w-full sm:w-auto justify-center shrink-0"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {/* Botão Orçamento */}

@@ -10,23 +10,23 @@ export function Navbar() {
       <div className="text-xl font-bold text-black dark:text-white">Minaspel</div>
       <ul className="flex space-x-6 text-sm font-medium text-gray-700 dark:text-gray-300">
         <li>
-          <Link href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-            Início
+            <Link href="#inicio" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+              Início
           </Link>
         </li>
         <li>
-          <Link href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-            Sobre
+            <Link href="#sobre" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+              Sobre
           </Link>
         </li>
         <li>
-          <Link href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-            Produto
+            <Link href="#produto" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+              Produto
           </Link>
         </li>
         <li>
-          <Link href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-            Contato
+            <Link href="#contato" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+              Contato
           </Link>
         </li>
       </ul>

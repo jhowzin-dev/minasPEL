@@ -38,7 +38,7 @@ export function AboutBrief() {
             className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
             Sobre a Minaspel
@@ -48,7 +48,7 @@ export function AboutBrief() {
             className="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             Há mais de 20 anos fornecendo filmes técnicos, laminados e soluções sob medida para a indústria brasileira. Nossa missão é garantir qualidade, inovação e suporte especializado a cada cliente.
@@ -63,7 +63,7 @@ export function AboutBrief() {
               className="p-6 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-500/50 transition-all duration-300 flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
               <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-5 border border-blue-500/20">
