@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Navbar } from "../src/components/ui/navbar";
+import { WhatsAppFAB } from "../src/components/ui/whatsapp-fab";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
+        <WhatsAppFAB />
       </body>
     </html>
   );
