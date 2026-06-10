@@ -27,6 +27,18 @@
 }
 
 html { scroll-behavior: smooth; }
+/* WebKit fallback for backdrop‑filter */
+
+/* Nav background helpers (same visual as bg-white/20 & dark:bg-black/30) */
+.navbar-bg { background-color: rgba(255,255,255,0.2); }
+.dark .navbar-bg-dark { background-color: rgba(0,0,0,0.3); }
+
+.backdrop-blur-sm,
+.backdrop-blur-xl {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
 
 body {
   background: var(--background);
