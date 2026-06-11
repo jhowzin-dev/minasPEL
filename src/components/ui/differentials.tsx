@@ -54,7 +54,7 @@ const itemVariants = {
   visible: { 
     y: 0, 
     opacity: 1,
-    transition: { duration: 0.4, ease: "easeOut" }
+    transition: { duration: 0.4 }
   },
 };
 
@@ -79,7 +79,7 @@ export function Differentials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.05 }}
-            className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight"
+            className="text-3xl sm:text-4xl font-extrabold text-minaspel-light tracking-tight"
           >
             Por que escolher a <span className="text-blue-400">Minaspel</span>?
           </motion.h2>
@@ -131,7 +131,7 @@ export function Differentials() {
                     <span className="text-[10px] font-mono tracking-wider text-minaspel-slate/50 block mb-1 group-hover:text-blue-400/70 transition-colors duration-300">
                       {item.tag}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold text-white mb-2 tracking-tight group-hover:text-white/95 transition-colors">
+                    <h3 className="text-base sm:text-lg font-bold text-minaspel-light mb-2 tracking-tight group-hover:text-minaspel-light/95 transition-colors">
                       {item.title}
                     </h3>
                     <p className="text-minaspel-slate text-xs sm:text-sm leading-relaxed">
