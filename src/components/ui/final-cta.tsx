@@ -3,15 +3,13 @@ import { motion } from "motion/react";
 
 export function FinalCTA() {
   return (
-    <section className="relative py-10 bg-gradient-to-r from-gray-950 via-blue-950 to-gray-950 text-white overflow-hidden border-t border-white/5 isolate transform-gpu">
-      {/* Detalhe sutil de luz ao fundo */}
+    <section className="relative py-10 bg-gradient-to-r from-gray-950 via-blue-950 to-gray-950 text-white overflow-hidden border-t border-minaspel-border/20 isolate transform-gpu">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-40 bg-[var(--bg-blue-500-10)] rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto px-6 z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        {/* Textos à esquerda */}
+
         <div className="text-center md:text-left max-w-xl">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: -5 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -30,15 +28,13 @@ export function FinalCTA() {
           </motion.h2>
         </div>
 
-        {/* Botões à direita */}
-        <motion.div 
+        <motion.div
           className="flex flex-row items-center gap-3 w-full sm:w-auto justify-center shrink-0"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {/* Botão Orçamento */}
           <motion.a
             href="#"
             whileHover={{ scale: 1.03, y: -1 }}
@@ -47,8 +43,7 @@ export function FinalCTA() {
           >
             Orçamento
           </motion.a>
-          
-          {/* Botão WhatsApp */}
+
           <motion.a
             href="#"
             whileHover={{ scale: 1.03, backgroundColor: "rgba(255, 255, 255, 0.06)", y: -1 }}

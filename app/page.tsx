@@ -11,24 +11,24 @@ import { FinalCTA } from "@/src/components/ui/final-cta";
 export default function Home() {
   return (
     <>
-      {/* Hero based on original spotlight-new */}
-      <div id="inicio" className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black overflow-hidden">
+      {/* Hero ajustado com fundo preto para destacar o feixe do Spotlight */}
+      <div id="inicio" className="relative flex flex-col flex-1 items-center justify-center bg-black font-sans overflow-hidden">
         <Spotlight />
         <main className="relative z-10 flex flex-1 w-full max-w-3xl flex-col items-center justify-center py-32 px-8 text-center">
-          <h1 className="text-5xl font-bold text-black dark:text-white">Minaspel</h1>
-          <p className="mt-4 max-w-md text-lg text-gray-700 dark:text-gray-300">
+          <h1 className="text-5xl font-bold text-white">Minaspel</h1>
+          <p className="mt-4 max-w-md text-lg text-minaspel-slate">
             Soluções industriais de alta performance para filmes técnicos, laminados e muito mais.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row justify-center">
             <a
               href="#"
-              className="rounded bg-blue-600 px-6 py-3 text-white hover:bg-blue-700"
+              className="rounded bg-blue-600 px-6 py-3 text-white hover:bg-blue-700 transition-colors"
             >
               Solicitar Orçamento
             </a>
             <a
               href="#"
-              className="rounded border border-blue-600 px-6 py-3 text-blue-600 hover:bg-blue-600 hover:text-white"
+              className="rounded border border-blue-500 px-6 py-3 text-blue-400 hover:bg-blue-600 hover:text-white transition-all"
             >
               Conhecer Soluções
             </a>
@@ -46,4 +46,3 @@ export default function Home() {
     </>
   );
 }
-

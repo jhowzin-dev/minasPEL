@@ -29,13 +29,13 @@ const differentials = [
 export function AboutBrief() {
   return (
     // Ajustado para o mesmo tom de azul/escuro do restante do seu site
-    <section className="py-20 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800/50">
+    <section className="py-20 bg-minaspel-dark border-b border-minaspel-border">
       <div className="max-w-5xl mx-auto px-6">
-        
+
         {/* Título com animação suave e gradiente */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2
-            className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4 tracking-tight"
+            className="text-3xl font-bold text-white mb-4 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
@@ -45,7 +45,7 @@ export function AboutBrief() {
           </motion.h2>
           
           <motion.p
-            className="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed"
+            className="text-minaspel-slate text-base sm:text-lg leading-relaxed"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
@@ -60,7 +60,7 @@ export function AboutBrief() {
           {differentials.map((item, i) => (
             <motion.div
               key={i}
-              className="p-6 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-500/50 transition-all duration-300 flex flex-col"
+              className="p-6 rounded-xl bg-minaspel-card border border-minaspel-border hover:border-blue-500/50 transition-all duration-300 flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2 }}
@@ -72,7 +72,7 @@ export function AboutBrief() {
               <h3 className="text-lg font-semibold text-white mb-2 tracking-wide">
                 {item.title}
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
+              <p className="text-minaspel-slate text-sm leading-relaxed">
                 {item.description}
               </p>
             </motion.div>

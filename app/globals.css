@@ -1,33 +1,40 @@
 @import "tailwindcss";
 
-html { color-scheme: light; }
+html { color-scheme: dark; }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  /* WebKit‑safe semi‑transparent colors */
-  --bg-white-5: #ffffff0d;   /* 5 % */
-  --bg-white-10: #ffffff1a;  /* 10 % */
-  --bg-white-20: #ffffff33;  /* 20 % */
-  --bg-white-30: #ffffff4d;  /* 30 % */
-  --bg-black-30: #0000004d;  /* 30 % */
-  --bg-blue-500-10: #3b82f61a; /* Tailwind blue‑500 10 % */
+  /* Retornando às cores azuis originais (iguais às da Vercel) */
+  --background: #0f1729;
+  --foreground: #c8d5e6;
+  --bg-brand-5: #0f17290d;
+  --bg-brand-10: #0f17291a;
+  --bg-brand-20: #0f172933;
+  --bg-brand-30: #0f17294d;
+  --bg-black-30: #0000004d;
+  --bg-blue-500-10: #3b82f61a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-minaspel-dark: #0f1729;
+  --color-minaspel-card: #1a2332;
+  --color-minaspel-border: #243044;
+  --color-minaspel-slate: #8b9ab5;
+  --color-minaspel-light: #c8d5e6;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-
 html { scroll-behavior: smooth; }
-/* WebKit fallback for backdrop‑filter */
 
-/* Nav background helpers (same visual as bg-white/20 & dark:bg-black/30) */
-.navbar-bg { background-color: rgba(255,255,255,0.2); }
-.dark .navbar-bg-dark { background-color: rgba(0,0,0,0.3); }
+.navbar-bg {
+  /* Efeito fosco acinzentado idêntico ao da Vercel */
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
 
 .backdrop-blur-sm,
 .backdrop-blur-xl {
@@ -35,17 +42,16 @@ html { scroll-behavior: smooth; }
   backdrop-filter: blur(12px);
 }
 
-
 body {
-
-/* Force form elements to use defined colors */
-input, textarea, select, button {
-  background-color: var(--background) !important;
-  color: var(--foreground) !important;
-  border-color: var(--foreground) !important;
-}
-
+  /* ⚠️ IMPORTANTE: Estas 3 propriedades PRECISAM vir no topo */
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+
+  /* Só DEPOIS das propriedades acima, você insere os blocos aninhados */
+  input, textarea, select, button {
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
+    border-color: var(--foreground) !important;
+  }
 }
