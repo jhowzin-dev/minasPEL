@@ -9,7 +9,7 @@ export default function HeadComponent() {
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       {/* Allow both light and dark schemes */}
-      <meta name="color-scheme" content="light dark" />
+      <meta name="color-scheme" content="light" />
       {/* Fallback for backdrop-filter on older iOS */}
       <style>{`
         nav { backdrop-filter: blur(0); }
