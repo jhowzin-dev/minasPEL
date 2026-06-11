@@ -3,13 +3,15 @@
 html { color-scheme: dark; }
 
 :root {
-  /* Retornando às cores azuis originais (iguais às da Vercel) */
-  --background: #0f1729;
-  --foreground: #c8d5e6;
-  --bg-brand-5: #0f17290d;
-  --bg-brand-10: #0f17291a;
-  --bg-brand-20: #0f172933;
-  --bg-brand-30: #0f17294d;
+  /* 🎨 AJUSTADO: Fundo base ligeiramente mais claro, puxado para um navy sofisticado */
+  --background: #131a26;
+  --foreground: #f8fafc;
+  
+  /* Sincronização automática das opacidades base */
+  --bg-brand-5: #131a260d;
+  --bg-brand-10: #131a261a;
+  --bg-brand-20: #131a2633;
+  --bg-brand-30: #131a264d;
   --bg-black-30: #0000004d;
   --bg-blue-500-10: #3b82f61a;
 }
@@ -17,22 +19,67 @@ html { color-scheme: dark; }
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-minaspel-dark: #0f1729;
-  --color-minaspel-card: #1a2332;
-  --color-minaspel-border: #243044;
-  --color-minaspel-slate: #8b9ab5;
-  --color-minaspel-light: #c8d5e6;
+  
+  /* Fundo padrão das seções normais */
+  --color-minaspel-dark: #131a26;
+  
+  /* 🌙 NOVO: Use "bg-minaspel-darker" nas seções que você deseja que fiquem bem escuras */
+  --color-minaspel-darker: #0a0d14;
+  
+  /* Cards com contraste limpo e saltado do fundo */
+  --color-minaspel-card: #1e293b;
+  
+  /* Linha de divisão interna dos blocos */
+  --color-minaspel-border: #2e3d52;
+  
+  --color-minaspel-slate: #94a3b8;
+  --color-minaspel-light: #f1f5f9;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 html { scroll-behavior: smooth; }
 
+/* ✨ DETALHE BRANCO: Customização fina da barra de rolagem */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ✨ DETALHE BRANCO: Seleção de texto iluminada */
+::selection {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* 💡 Micro-detalhes brancos para você usar como classes extras no HTML se quiser */
+.accent-dot-white {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.border-white-subtle {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
 .navbar-bg {
-  /* Efeito fosco acinzentado idêntico ao da Vercel */
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: rgba(19, 26, 38, 0.75);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
+  /* ✨ DETALHE BRANCO: Uma linha cirúrgica branca de 8% na base da navbar */
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 

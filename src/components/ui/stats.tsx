@@ -1,4 +1,5 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 const stats = [
@@ -8,25 +9,84 @@ const stats = [
   { label: "Cobertura", value: "Brasil" },
 ];
 
+function AnimatedCounter({ value }: { value: string }) {
+  const [count, setCount] = useState(0);
+  const numericTarget = parseInt(value.replace(/[^\d]/g, ""), 10);
+  const isNumber = !isNaN(numericTarget);
+
+  useEffect(() => {
+    if (!isNumber) return;
+
+    let start = 0;
+    const end = numericTarget;
+    const duration = 1200;
+    const frameRate = 1000 / 60;
+    const totalFrames = Math.round(duration / frameRate);
+    let frame = 0;
+
+    const counter = setInterval(() => {
+      frame++;
+      const progress = frame / totalFrames;
+      const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+      const currentCount = Math.round(easeOutProgress * end);
+
+      if (frame >= totalFrames) {
+        clearInterval(counter);
+        setCount(end);
+      } else {
+        setCount(currentCount);
+      }
+    }, frameRate);
+
+    return () => clearInterval(counter);
+  }, [numericTarget, isNumber]);
+
+  if (!isNumber) return <span>{value}</span>;
+
+  const formattedCount = value.includes(".") 
+    ? count.toLocaleString("pt-BR") 
+    : count.toString();
+
+  return (
+    <span>
+      {formattedCount}
+      {value.includes("+") ? "+" : ""}
+    </span>
+  );
+}
+
 export function Stats() {
   return (
-    <section className="py-12 bg-minaspel-dark">
+    <section className="py-14 bg-minaspel-darker border-b border-minaspel-border/20">
       <div className="max-w-5xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold text-white mb-8">
+        <h2 className="text-2xl font-bold text-white mb-10 tracking-tight">
           Nossos números
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        
+        {/* 
+          🛠️ MELHORADO: 
+          - max-w-3xl: Junta mais os números no meio da tela.
+          - divide-x: Cria barras verticais elegantes separando cada um deles.
+        */}
+        <div className="grid grid-cols-4 max-w-3xl mx-auto divide-x divide-minaspel-border/30">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
-              className="bg-minaspel-card rounded-xl shadow-sm p-6 text-center"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-center px-1 sm:px-4"
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
             >
-              <p className="text-3xl font-bold text-blue-600 mb-2">{s.value}</p>
-              <p className="text-sm text-minaspel-slate">{s.label}</p>
+              {/* 🛠️ MELHORADO: Adicionado um drop-shadow branco bem sutil de fundo para dar presença ao número */}
+              <p className="text-xl sm:text-3xl font-extrabold text-white mb-2 tracking-tight drop-shadow-[0_0_12px_rgba(255,255,255,0.12)]">
+                <AnimatedCounter value={s.value} />
+              </p>
+              
+              {/* 🛠️ MELHORADO: Texto em caixa alta e espaçado para um visual muito mais clean e técnico */}
+              <p className="text-[9px] sm:text-xs font-semibold text-minaspel-slate/80 uppercase tracking-wider leading-tight">
+                {s.label}
+              </p>
             </motion.div>
           ))}
         </div>
