@@ -8,19 +8,15 @@ const logos = [
 ];
 
 export function ClientsMarquee() {
-  // Uma lista compacta e limpa para as esteiras
   const singleSet = [...logos, ...logos];
 
   return (
-    <section className="py-6 bg-minaspel-dark border-y border-minaspel-border overflow-hidden w-full relative">
-      {/* Efeito de fade nas laterais para um visual mais elegante */}
-      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-minaspel-dark to-transparent z-10 pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-minaspel-dark to-transparent z-10 pointer-events-none" />
+    <section className="py-6 bg-minaspel-gray-dark border-y border-minaspel-border overflow-hidden w-full relative">
+      {/* Efeito de fade ajustado para o novo fundo escuro */}
+      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-minaspel-gray-dark to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-minaspel-gray-dark to-transparent z-10 pointer-events-none" />
 
-      {/* Container principal que esconde o overflow */}
       <div className="flex w-full overflow-hidden select-none">
-        
-        {/* ESTEIRA 1 (Principal) */}
         <div className="flex shrink-0 min-w-full items-center justify-around gap-16 animate-scroll px-4">
           {singleSet.map((src, i) => (
             <img
@@ -31,8 +27,6 @@ export function ClientsMarquee() {
             />
           ))}
         </div>
-
-        {/* ESTEIRA 2 (Cópia idêntica para o loop infinito perfeito) */}
         <div className="flex shrink-0 min-w-full items-center justify-around gap-16 animate-scroll px-4" aria-hidden="true">
           {singleSet.map((src, i) => (
             <img
@@ -43,7 +37,6 @@ export function ClientsMarquee() {
             />
           ))}
         </div>
-
       </div>
 
       <style jsx>{`

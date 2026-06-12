@@ -57,34 +57,23 @@ function AnimatedCounter({ value }: { value: string }) {
 
 export function Stats() {
   return (
-    <section className="py-14 bg-minaspel-darker border-b border-minaspel-border/20">
+    <section className="py-14 bg-minaspel-gray-light border-b border-minaspel-border/20">
       <div className="max-w-5xl mx-auto px-4 text-center">
         <h2 className="text-2xl font-bold text-white mb-10 tracking-tight">
           Nossos números
         </h2>
         
-        {/* 
-          🛠️ MELHORADO: 
-          - max-w-3xl: Junta mais os números no meio da tela.
-          - divide-x: Cria barras verticais elegantes separando cada um deles.
-        */}
         <div className="grid grid-cols-4 max-w-3xl mx-auto divide-x divide-minaspel-border/30">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
               className="text-center px-1 sm:px-4"
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
+              // ... (resto das props da motion)
             >
-              {/* 🛠️ MELHORADO: Adicionado um drop-shadow branco bem sutil de fundo para dar presença ao número */}
               <p className="text-xl sm:text-3xl font-extrabold text-white mb-2 tracking-tight drop-shadow-[0_0_12px_rgba(255,255,255,0.12)]">
                 <AnimatedCounter value={s.value} />
               </p>
-              
-              {/* 🛠️ MELHORADO: Texto em caixa alta e espaçado para um visual muito mais clean e técnico */}
-              <p className="text-[9px] sm:text-xs font-semibold text-minaspel-slate/80 uppercase tracking-wider leading-tight">
+              <p className="text-[10px] sm:text-xs font-semibold text-minaspel-slate/90 uppercase tracking-wider leading-tight">
                 {s.label}
               </p>
             </motion.div>
